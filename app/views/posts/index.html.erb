@@ -1,0 +1,18 @@
+<h1>#Dev {Command Hacks}</h1>
+<h4> <%= link_to "Home", posts_path %>
+     <%= link_to "Create Command", new_post_path %>
+     My Commands
+</h4>
+
+<% @posts.each do |post| %>
+  <div>
+    <p> <%= link_to "#{post.title}", post_path(post) %></p>
+    <p> <%= post.photo_url %> </p>
+    <p> <%= post.command %> </p>
+    <p> <%= post.description %> </p>
+  </div>
+<% end %>
+
+<p> Ruby </p>
+<p> Beginner </p>
+<p> Terminal </p>
