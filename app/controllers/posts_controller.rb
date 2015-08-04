@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate
+  skip_before_action :authenticate, only: [:index]
 
   def index
     @posts = Post.all
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create!(post_params)
+    @post = current_user.posts.create!(post_params)
     #.merge({user_id: session[:user]["id"]}))
     redirect_to post_path(@post)
   end
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def update
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :command, :description, :user_id)
+    params.require(:post).permit(:title, :command, :description)
   end
 
 end

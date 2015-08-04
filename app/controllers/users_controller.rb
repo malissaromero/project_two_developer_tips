@@ -16,8 +16,9 @@ class UsersController < ApplicationController
     else
       message = "Your account couldn't be created. Did you enter a unique username and password?"
     end
+    puts message
     flash[:notice] = message
-    redirect_to action: :signin
+    redirect_to action: :signup
   end
 
   def signin
@@ -27,14 +28,13 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username])
     if !@user
       message = "This user doesn't exist. Please sign up."
-      redirect_to action: :signup
     elsif !BCrypt::Password.new(@user.password_digest).is_password?(params[:password])
       message = "Your password's wrong."
-      redirect_to action: :signin
     else
       message = "You're signed in, #{@user.username}!"
       session[:is_signed_in] = true
-      session[:user] = User.find_by(username:params[:username])
+
+      session[:user_id] = @user.id
       cookies[:username] = {
       value: @user.username,
       expires: 1.year.from_now

@@ -9,7 +9,7 @@
 <body>
   <nav>
     <% if session[:is_signed_in] %>
-      <a href="/signout"><%= session[:user]["username"] %>: sign out</a>
+      <a href="/signout"><%= current_user.username %>: sign out</a>
     <% else %>
       <a href="/signup">Sign Up</a>
       <a href="/signin">Sign In</a>
