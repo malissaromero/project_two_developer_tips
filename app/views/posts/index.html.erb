@@ -1,8 +1,11 @@
-<h1>#Dev {Command Hacks}</h1>
-<h4> <%= link_to "Home", posts_path %>
-     <%= link_to "Create Command", new_post_path %>
-     <%= link_to "My Commands", user_posts_path(:user_id) %>
-</h4>
+<nav class="nav-list">
+  <h1 class="nav-header">DEVELOPMENT COMMAND HACKS</h1>
+  <ul>
+    <li><%= link_to "HOME", posts_path, class: "home"%></li>
+    <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
+    <li><%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %></li>
+  </ul>
+</nav>
 
 <% @posts.each do |post| %>
   <div>
@@ -12,6 +15,6 @@
   </div>
 <% end %>
 
-<p> Ruby </p>
-<p> Beginner </p>
-<p> Terminal </p>
+<p> RUBY </p>
+<p> BEGINNER </p>
+<p> TERMINAL </p>

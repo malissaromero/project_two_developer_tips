@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @user = User.find(session[:user_id])
     #@post = Post.find(params[:id])
     #@post.order("RANDOM()").first
     #Post.first(:order => "RANDOM()")

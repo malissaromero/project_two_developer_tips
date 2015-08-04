@@ -1,6 +1,16 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate
 
+  def index
+    @users = User.all
+    @user = user.find(params[:id])||current_user
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @post = @user.posts
+  end
+
   def signup
   end
 

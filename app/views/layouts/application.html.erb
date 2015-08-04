@@ -2,24 +2,23 @@
 <html>
 <head>
   <title>Developer Command Hacks</title>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <% if session[:is_signed_in] %>
-      <a href="/signout"><%= current_user.username %>: sign out</a>
-    <% else %>
-      <a href="/signup">Sign Up</a>
-      <a href="/signin">Sign In</a>
-    <% end %>
-  </nav>
-  <h2> <%= flash[:notice] %> </h2>
   <div class="site-container">
-<%= yield %>
-  <div class="mockup">
-  </div>
+    <nav>
+      <% if session[:is_signed_in] %>
+        <a href="/signout"><%= current_user.username %>: sign out</a>
+      <% else %>
+        <a href="/signup">Sign Up</a>
+        <a href="/signin">Sign In</a>
+      <% end %>
+    </nav>
+    <h2> <%= flash[:notice] %> </h2>
+    <%= yield %>
   </div>
 </body>
 </html>
