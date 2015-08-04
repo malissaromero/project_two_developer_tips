@@ -1,7 +1,7 @@
 <h1> <%= link_to "Back to Home", posts_path %> </h1>
 
 <div>
-  <p> <%= @post.title %>
+  <p> <%= @post.title %><%= link_to "(Edit)", edit_post_path(@post) %></p>
   <p> <%= @post.command %> </p>
   <p> <%= @post.description %> </p>
 </div>
