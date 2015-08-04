@@ -32,3 +32,30 @@ h4 {
   top: -50px;
   left: 50%;
 }
+
+/**, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.site-container {
+  background-color: pink;
+  height: 500px;
+  margin: 0 auto;
+  width: 60%;
+}*/
+/*
+  @media (min-width: 320px) {
+    .site-container {
+    }
+  }
+
+  @media (min-width: 600px) {
+    .site-container {
+    }
+  }*/

@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
+  skip_before_action :authenticate
 
   def index
     @posts = Post.all
+    #@post = Post.find(params[:id])
     #@post.order("RANDOM()").first
     #Post.first(:order => "RANDOM()")
-    #Post.order("RANDOM()").first
+    #@post = Post.order("RANDOM()").first
   end
 
   def new
@@ -12,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.create!(post_params.merge({user_id: session[:user]["id"]}))
     redirect_to post_path(@post)
   end
 
@@ -22,6 +24,9 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    if @post.user_id != current_user["id"]
+      redirect_to posts_path
+    end
   end
 
   def update
@@ -38,7 +43,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :command, :description)
+    params.require(:post).permit(:title, :command, :description, :user_id)
   end
 
 end

@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :command
       t.string :description
+      t.references :user, index: true, foreign_key: true
     end
   end
 end
