@@ -1,13 +1,11 @@
 <h1> <%= link_to "Home", posts_path %>
 
-<h2> <%= flash[:sign_in_message] %> </h2>
 <%= form_tag("/signin", method: "post") do %>
 <input type="text" name="username" placeholder="username" value="<%= cookies[:username] %>" />
 <input type="password" name="password" placeholder="password"/>
 <input type="submit" value="Sign in"/>
 <% end %>
 
-<!-- <h2> <%= flash[:sign_in_message] %> </h2>
 
 <%=form_for :user, url: '/signin' do |f| %>
   <%= f.label :username %>

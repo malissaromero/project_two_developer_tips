@@ -40,7 +40,7 @@ class UsersController < ApplicationController
       expires: 1.year.from_now
     }
     end
-    flash[:sign_in_message] = message
+    flash[:notice] = message
     redirect_to action: :signin
   end
 
