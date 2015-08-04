@@ -10,8 +10,10 @@ Rails.application.routes.draw do
     # resources :comments
   end
 
-  get '/signin', to: 'users#signin_prompt'
-  post '/signin', to: 'users#signin'
+  get '/signin', to: 'users#signin'
+  post '/signin', to: 'users#signin!'
+  get '/signup', to: 'users#signup'
+  post '/signup', to: 'users#signup!'
   get '/signout', to: 'users#signout'
 
   ## YES mine? /users/:user_id/posts/

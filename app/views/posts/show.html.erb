@@ -2,9 +2,6 @@
 
 <div>
   <p> <%= @post.title %>
-      <% if @post.user.user_id == current_user["id"] %>
-      <%= link_to "(Edit)", edit_post_path(@post) %></p>
-  <p> <%= @post.photo_url %> </p>
   <p> <%= @post.command %> </p>
   <p> <%= @post.description %> </p>
 </div>
