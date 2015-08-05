@@ -25,19 +25,12 @@ html {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(
     #E8E8E8 50%, #F8F8F8 50%
-    );
+  );
 }
 
 
 h2 {
   color: #484647;
-  font-size: 100%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 400;
-}
-
-p {
-  color: #0F0F0F;
   font-size: 100%;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
@@ -71,6 +64,17 @@ a.home, a.create, a.my_command {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 120%;
   font-weight: 600;
+}
+
+.categories li {
+  color:  #6B6B6B;
+  display: inline-block;
+  font-size: 120%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  padding: 25px 100px 0 80px;
+  flex: 8 0 auto;
+  padding-left: 200px;
 }
 
 /*

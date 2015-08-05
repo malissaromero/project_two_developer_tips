@@ -14,19 +14,19 @@ Bronze Level
 
 Silver Level
 
-1. The user should be able to sort by categories and view a list of tips.
+1. The user should not be able to edit or delete another user's posts.
 2. The user should be able to see their specific posts.
-3. The user should not be able to edit or delete another user's posts.
+3. The user should be able to sort by categories and view a list of tips.
 
 Gold Level
 
 1. The user should be able to click on a ">" symbol and the page should swipe left.
 2. The user should be able to view a random daily post.
-3. A user should get a daily tip sent to their email. 
+3. A user should get a daily tip sent to their email.
 
 ERD
 
 A user has many posts.
 A post belongs to a user.
-A post has many comments.
-A comment belongs to a post.
+A post belongs to a category.
+A category has many posts.

@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   skip_before_action :authenticate, only: [:index]
 
   def index
-    @posts = Post.all
-    @user = User.find(session[:user_id])
-    #@post = Post.find(params[:id])
-    #@post.order("RANDOM()").first
-    #Post.first(:order => "RANDOM()")
-    #@post = Post.order("RANDOM()").first
+    if session[:user_id]
+      @posts = Post.all
+      @user = User.find(session[:user_id])
+    else
+      @posts = Post.all
+    end
   end
 
   def new
@@ -16,7 +16,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create!(post_params)
-    #.merge({user_id: session[:user]["id"]}))
     redirect_to post_path(@post)
   end
 
