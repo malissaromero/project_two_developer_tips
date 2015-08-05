@@ -1,3 +1,4 @@
+<!---------------Header Links------------------------>
 <nav class="nav-list">
   <h1 class="nav-header">DEVELOPMENT COMMAND HACKS</h1>
   <ul>
@@ -8,21 +9,22 @@
         <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
       <% end %>
     </li>
+    <li>SIGNOUT</li>
   </ul>
 </nav>
 
-<% @posts.each do |post| %>
-  <div>
-    <p> <%= link_to "#{post.title}", post_path(post) %></p>
-    <p> <%= post.command %> </p>
-    <p> <%= post.description %> </p>
-  </div>
-<% end %>
+<nav class="about">
+  <p>Developer command hacks allows you to learn new shortcuts everyday. Click on a category or go through the slider and start learning. They will definitely shave valuable seconds from your life.
+  </p>
+</nav>
 
+
+<!------------Categories Links---------------------->
 <nav class="categories">
   <ul>
-    <li><%= image_tag("baby3.png", class: "baby") %><br>BEGINNER<br></li>
-    <li><%= image_tag("ruby2.png", class: "ruby") %><br>RUBY<br></li>
-    <li><%= image_tag("terminal3.png", class: "terminal") %><br>TERMINAL<br></li>
+    <li> <%= image_tag("baby3.png", class: "baby") %>
+          <%= link_to "BEGINNER", category_path %></li>
+    <li><%= image_tag("ruby2.png", class: "ruby") %> <%= link_to "RUBY, category_path" %></li>
+    <li><%= image_tag("terminal3.png", class: "terminal") %> <%= link_to "TERMINAL", category_path %></li>
   </ul>
 </nav>
