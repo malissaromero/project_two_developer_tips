@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     if session[:user_id]
       @posts = Post.all
       @user = User.find(session[:user_id])
+      @categories = Category.all
     else
       @posts = Post.all
     end
