@@ -3,7 +3,10 @@
   <ul>
     <li><%= link_to "HOME", posts_path, class: "home"%></li>
     <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
-    <li><%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %></li>
+    <li>
+      <% if session[:user_id]%>
+        <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
+      <% end %>
   </ul>
 </nav>
 
