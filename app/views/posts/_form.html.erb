@@ -3,6 +3,8 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 
+  <%= collection_select(:post, :category, Category.all, :id, :name) %>
+
   <%= f.label :command %>
   <%= f.text_field :command %>
 
@@ -12,3 +14,10 @@
   <%= f.submit %>
 
 <% end %>
+
+
+<!-- <%#= <select name="post[category_id]">
+      <option value="">Please Select Category</option>
+      <option value="1" selected="selected"> Beginner </option>
+      <option value="2"> Ruby </option>
+      <option value="3"> Terminal </option>) #%> -->
