@@ -77,6 +77,12 @@ a.home, a.create, a.my_command {
   padding-left: 200px;
 }
 
+img.baby, img.ruby, img.terminal {
+  width: 60px;
+  height: 60px;
+}
+
+
 /*
   @media (min-width: 320px) {
     .site-container {

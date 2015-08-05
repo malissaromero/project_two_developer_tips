@@ -17,7 +17,7 @@
         <a href="/signin">Sign In</a>
       <% end %>
     </nav>
-    <h2> <%= flash[:notice] %> </h2>
+    <div class="flash_notice"> <%= flash[:notice] %> </div>
     <%= yield %>
   </div>
 </body>
