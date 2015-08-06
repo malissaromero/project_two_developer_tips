@@ -1,3 +1,8 @@
+*= require_self
+*= require bxslider
+*= require_tree .
+
+
 *, *::after, *::before {
   box-sizing: inherit;
   margin: 0;
@@ -132,6 +137,3 @@ img.baby, img.ruby, img.terminal {
     .site-container {
     }
   }*/
-  /**= require_self
-  *= require bxslider
-  *= require_tree .*/

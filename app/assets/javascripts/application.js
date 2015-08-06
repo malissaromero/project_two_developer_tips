@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bxslider
 //= require_tree .
+
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
