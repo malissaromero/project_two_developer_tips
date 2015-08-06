@@ -102,11 +102,6 @@ a.home, a.create, a.my_command {
   text-align: center;
 }
 
-/*.icon {
-    width: 60px;
-    height: 60px;
-}*/
-
 a:-webkit-any-link {
   text-decoration: none;
   font-size: 120%;
