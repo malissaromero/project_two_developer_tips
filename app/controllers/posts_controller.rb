@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @categories = Category.all
+    @category = Category.find(params[:category_id])
     @posts = Post.all
   end
 
