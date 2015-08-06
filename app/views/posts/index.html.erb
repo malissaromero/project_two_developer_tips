@@ -1,9 +1,5 @@
-<nav class="categories">
-  <ul>
-    <li><%= link_to "BEGINNER", category_posts_path(:category_id) %><p>Click on this category and learn cool new commands for beginners. </p></li>
-
-    <li><%= link_to "RUBY", category_posts_path(:category_id) %><p>Click on this category and learn cool new commands for Ruby. </p></li>
-
-    <li><%= link_to "TERMINAL", category_posts_path(:category_id) %><p>Click on this category and learn cool new commands for Terminal.</p></li>
-  </ul>
-</nav>
+<% @categories.posts.each do |post| %>
+  <div>
+    <p> <%= link_to "#{post.title}", post_path(post) %></p>
+  </div>
+<% end %>

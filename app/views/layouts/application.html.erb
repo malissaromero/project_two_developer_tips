@@ -12,11 +12,11 @@
     <nav class="nav-list">
       <h1 class="nav-header">DEVELOPMENT COMMAND HACKS</h1>
       <ul>
-        <li><%= link_to "HOME", posts_path, class: "home"%></li>
+        <li><%= link_to "HOME", categories_path, class: "home"%></li>
         <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
         <li>
           <% if @user %>
-                <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
+            <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
           <% end %>
       </li>
         <li>

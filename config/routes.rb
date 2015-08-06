@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'posts#index'
+  root to: 'categories#index'
 
   resources :users do
     resources :posts, only: [:index]
