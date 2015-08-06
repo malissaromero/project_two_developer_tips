@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :authenticate
 
   def index
-    # @categories = Category.all
     @category = Category.find(params[:category_id])
     @posts = Post.all
   end

@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  #user authentication routes
   get '/signin', to: 'users#signin'
   post '/signin', to: 'users#signin!'
   get '/signup', to: 'users#signup'
