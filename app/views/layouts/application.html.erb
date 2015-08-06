@@ -15,6 +15,11 @@
         <li><%= link_to "HOME", posts_path, class: "home"%></li>
         <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
         <li>
+          <% if @user %>
+                <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
+          <% end %>
+      </li>
+        <li>
           <% if session[:is_signed_in] %>
             <a href="/signout"><%= current_user.username %>: SIGNOUT</a>
           <% else %>

@@ -1,8 +1,9 @@
-<!------------Categories Links---------------------->
 <nav class="categories">
   <ul>
-    <li><%= image_tag("baby3.png", class: "icon") %><%= link_to "BEGINNER", category_path %></li>
-    <li><%= image_tag("ruby2.png", class: "icon") %><%= link_to "RUBY", category_path %></li>
-    <li><%= image_tag("terminal3.png", class: "icon") %><%= link_to "TERMINAL", category_path %></li>
+    <li><%= link_to "BEGINNER", category_posts_path(:category_id) %><p>Click on this category and learn cool new commands for beginners. </p></li>
+
+    <li><%= link_to "RUBY", category_posts_path(:category_id) %><p>Click on this category and learn cool new commands for Ruby. </p></li>
+
+    <li><%= link_to "TERMINAL", category_posts_path(:category_id) %><p>Click on this category and learn cool new commands for Terminal.</p></li>
   </ul>
 </nav>

@@ -1,5 +1,5 @@
 ###### Post Seeds ######
-post1 = Post.create(title: "Find Your Current Directory", category: "terminal", command: "pwd", description: "Print Working Directory allows you to see which directory you currently are in.")
+# post1 = Post.create(title: "Find Your Current Directory", category: "terminal", command: "pwd", description: "Print Working Directory allows you to see which directory you currently are in.")
 # post2 = Post.create(title: "", category: "", command: "", post_id: )
 # post3 = Post.create(title: "", category: "", command: "", post_id: )
 # post4 = Post.create(title: "", category: "", command: "", post_id: )
@@ -11,5 +11,5 @@ ruby = Category.create(name: "Ruby")
 terminal = Category.create(name: "Terminal")
 
 ### CategoriesPosts Seeds ######
-CategoriesPosts.create(post_id: @post1, category_id: @beginner)
-CategoriesPosts.create(post_id:@post1, category_id: @terminal)
+# CategoriesPosts.create(post_id: @post1, category_id: @beginner)
+# CategoriesPosts.create(post_id:@post1, category_id: @terminal)

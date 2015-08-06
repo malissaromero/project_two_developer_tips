@@ -43,7 +43,6 @@ class UsersController < ApplicationController
     else
       message = "You're signed in, #{@user.username}!"
       session[:is_signed_in] = true
-
       session[:user_id] = @user.id
       cookies[:username] = {
       value: @user.username,

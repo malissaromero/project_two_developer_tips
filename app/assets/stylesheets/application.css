@@ -1,4 +1,7 @@
-*, *::after, *::before {
+/*= require_self
+= require_tree .*/
+
+.*, *::after, *::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -90,22 +93,19 @@ a.home, a.create, a.my_command {
 }
 
 .categories li {
-  background-color: red;
   color:  #6B6B6B;
   display: inline-block;
-  /*flex: 1 0 auto;*/
   font-size: 120%;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  /*padding: 25px 100px 0 80px;*/
-  /*flex: 8 0 auto;*/
-  /*padding-left: 200px;*/
+  padding: 25px 100px 0 85px;
+  text-align: center;
 }
 
-.icon {
+/*.icon {
     width: 60px;
     height: 60px;
-}
+}*/
 
 a:-webkit-any-link {
   text-decoration: none;
