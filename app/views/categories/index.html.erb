@@ -1,0 +1,5 @@
+<nav class="categories">
+  <% @categories.each do |category| %>
+    <li><%= link_to category.name.upcase, category_posts_path(category) %><p>Click on this category<br>and learn cool new commands<br>for <%=category.name%>. </p></li>
+  <% end %>
+</nav>

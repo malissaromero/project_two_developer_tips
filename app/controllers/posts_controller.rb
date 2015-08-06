@@ -1,13 +1,10 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate, only: [:index]
+  before_action :authenticate
 
   def index
-    if session[:user_id]
-      @posts = Post.all
-      @user = User.find(session[:user_id])
-    else
-      @posts = Post.all
-    end
+    # @categories = Category.all
+    @category = Category.find(params[:category_id])
+    @posts = Post.all
   end
 
   def new
@@ -41,7 +38,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :command, :description)
+    params.require(:post).permit(:title, :command, :description, :category_ids => [])
   end
-
 end

@@ -3,6 +3,8 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 
+  <%= collection_check_boxes(:post, :category_ids, Category.all, :id, :name) %>
+
   <%= f.label :command %>
   <%= f.text_field :command %>
 
