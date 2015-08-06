@@ -1,7 +1,4 @@
-*= require owl.carousel
-*= require owl.theme
-*= require_self
-*= require_tree .
+
 
 *, *::after, *::before {
   box-sizing: inherit;

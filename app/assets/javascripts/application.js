@@ -15,9 +15,3 @@
 //= require turbolinks
 //= require owl.carousel
 //= require_tree .
-
-$(document).ready(function() {
-
-  $("#owl-example").owlCarousel();
-
-});
