@@ -16,4 +16,8 @@
 //= require owl.carousel
 //= require_tree .
 
-$(".owl-carousel").owlCarousel();
+$(document).ready(function() {
+
+  $("#owl-example").owlCarousel();
+
+});
