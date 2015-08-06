@@ -1,3 +1,2 @@
 class CategoriesPostsController < ApplicationController
-
 end

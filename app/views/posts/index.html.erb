@@ -1,24 +1,8 @@
-<!---------------Header Links------------------------>
-<nav class="nav-list">
-  <h1 class="nav-header">DEVELOPMENT COMMAND HACKS</h1>
-  <ul>
-    <li><%= link_to "HOME", posts_path, class: "home"%></li>
-    <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
-    <li>
-      <% if session[:user_id]%>
-        <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
-      <% end %>
-    </li>
-    <li>SIGNOUT</li>
-  </ul>
-</nav>
-
 <!------------Categories Links---------------------->
 <nav class="categories">
   <ul>
-    <li> <%= image_tag("baby3.png", class: "baby") %>
-          <%= link_to "BEGINNER", category_path %></li>
-    <li><%= image_tag("ruby2.png", class: "ruby") %> <%= link_to "RUBY, category_path" %></li>
-    <li><%= image_tag("terminal3.png", class: "terminal") %> <%= link_to "TERMINAL", category_path %></li>
+    <li><%= image_tag("baby3.png", class: "icon") %><%= link_to "BEGINNER", category_path %></li>
+    <li><%= image_tag("ruby2.png", class: "icon") %><%= link_to "RUBY", category_path %></li>
+    <li><%= image_tag("terminal3.png", class: "icon") %><%= link_to "TERMINAL", category_path %></li>
   </ul>
 </nav>

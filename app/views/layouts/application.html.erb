@@ -15,19 +15,13 @@
         <li><%= link_to "HOME", posts_path, class: "home"%></li>
         <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
         <li>
-          <% if session[:user_id]%>
-            <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
+          <% if session[:is_signed_in] %>
+            <a href="/signout"><%= current_user.username %>: SIGNOUT</a>
+          <% else %>
+            <a href="/signup">SIGN UP |</a>
+            <a href="/signin"> SIGN IN</a>
           <% end %>
         </li>
-        <li>SIGNOUT</li>
-        <nav>
-          <% if session[:is_signed_in] %>
-            <a href="/signout"><%= current_user.username %>: sign out</a>
-          <% else %>
-            <a href="/signup">Sign Up</a>
-            <a href="/signin">Sign In</a>
-          <% end %>
-        </nav>
         <div class="flash_notice"> <%= flash[:notice] %> </div>
       </ul>
     </nav>

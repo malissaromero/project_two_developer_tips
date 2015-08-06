@@ -36,11 +36,16 @@ h2 {
   font-weight: 400;
 }
 
+ul {
+  list-style: none;
+}
+
 .nav-list {
   display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;
   list-style: none;
+  padding: 30px 0 0 0;
 }
 
 .nav-header {
@@ -56,6 +61,11 @@ h2 {
   flex: 0 1 auto;
   padding-left: 10px;
   text-align: right;
+  color: #6B6B6B;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 120%;
+  font-weight: 600;
 }
 
 a.home, a.create, a.my_command {
@@ -66,22 +76,51 @@ a.home, a.create, a.my_command {
   font-weight: 600;
 }
 
+.categories {
+  /*justify-content: space-between;*/
+  /*flex-direction: row;
+  flex-wrap: nowrap;*/
+  width: 100%;
+}
+
+.categories nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+}
+
 .categories li {
+  background-color: red;
   color:  #6B6B6B;
   display: inline-block;
+  /*flex: 1 0 auto;*/
   font-size: 120%;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  padding: 25px 100px 0 80px;
-  flex: 8 0 auto;
-  padding-left: 200px;
+  /*padding: 25px 100px 0 80px;*/
+  /*flex: 8 0 auto;*/
+  /*padding-left: 200px;*/
 }
 
+.icon {
+    width: 60px;
+    height: 60px;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  font-size: 120%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  color:  #6B6B6B;
+}
+
+/*
 img.baby, img.ruby, img.terminal {
   width: 60px;
   height: 60px;
 }
-
+*/
 
 /*
   @media (min-width: 320px) {
