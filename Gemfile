@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'owlcarousel-rails'
 gem 'bcrypt'
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
