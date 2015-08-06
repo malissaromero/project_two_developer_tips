@@ -1,5 +1,4 @@
 class Category < ActiveRecord::Base
-  has_many :posts
-  has_many :categories_posts
-  has_many :posts, through: :categories_posts
+  has_many :categorizations
+  has_many :posts, through: :categorizations
 end

@@ -1,10 +1,8 @@
-class CreateCategoriesPosts < ActiveRecord::Migration
+class CreateCategorizations < ActiveRecord::Migration
   def change
-    create_table :categories_posts do |t|
+    create_table :categorizations do |t|
       t.references :post, index: true, foreign_key: true
       t.references :category, index: true, foreign_key: true
-
-      t.timestamps null: false
     end
   end
 end

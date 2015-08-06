@@ -1,7 +1,6 @@
 <% @user.posts.each do |post| %>
   <div>
     <p> <%= link_to "#{post.title}", post_path(post) %></p>
-    <p> <%= post.category %> </p>
     <p> <%= post.command %> </p>
     <p> <%= post.description %> </p>
   </div>

@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate
 
   def index
-    @categories = Category.all
+    # @categories = Category.all
     @category = Category.find(params[:category_id])
     @posts = Post.all
   end
@@ -38,10 +38,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :category, :command, :description)
-  end
-  private
-  def category_params
-    params.require(:category).permit(:name, :category_id)
+    params.require(:post).permit(:title, :command, :description, :category_ids => [])
   end
 end
