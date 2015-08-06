@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate, only: [:index]
 
   def index
-    if session[:user_id]
+    if @user
       @posts = Post.all
       @user = User.find(session[:user_id])
       @categories = Category.all

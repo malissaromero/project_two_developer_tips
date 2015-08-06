@@ -132,3 +132,6 @@ img.baby, img.ruby, img.terminal {
     .site-container {
     }
   }*/
+  /**= require_self
+  *= require bxslider
+  *= require_tree .*/

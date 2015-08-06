@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bxslider-rails'
 gem 'bcrypt'
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

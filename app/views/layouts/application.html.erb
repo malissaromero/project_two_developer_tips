@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <link href="/lib/jquery.bxslider.css" rel="stylesheet" />
   <title>Developer Command Hacks</title>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -15,7 +18,7 @@
         <li><%= link_to "HOME", posts_path, class: "home"%></li>
         <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %></li>
         <li>
-          <% if session[:is_signed_in] %>
+          <% if @user %>
             <a href="/signout"><%= current_user.username %>: SIGNOUT</a>
           <% else %>
             <a href="/signup">SIGN UP |</a>
