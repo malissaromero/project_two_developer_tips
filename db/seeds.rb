@@ -1,3 +1,6 @@
+Category.destroy_all
+Post.destroy_all
+
 ###### Post Seeds ######
  post1 = Post.create(title: "Find Your Current Directory", command: "pwd", description: "Print Working Directory allows you to see which directory you currently are in.")
 # post2 = Post.create(title: "", category: "", command: "", post_id: )
