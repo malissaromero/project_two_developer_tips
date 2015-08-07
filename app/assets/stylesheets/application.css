@@ -39,6 +39,33 @@ h2 {
   font-weight: 400;
 }
 
+.about {
+  color:  #6B6B6B;
+  font-size: 120%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  padding: 120px 100px 15px 85px;
+  text-align: center;
+}
+
+.second {
+  color:  #6B6B6B;
+  font-size: 120%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  padding: 15px 100px 15px 85px;
+  text-align: center;
+}
+
+.third {
+  color:  #6B6B6B;
+  font-size: 120%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  padding: 15px 100px 120px 85px;
+  text-align: center;
+}
+
 ul {
   list-style: none;
 }
@@ -92,10 +119,10 @@ a.home, a.create, a.my_command {
 .categories li {
   color:  #6B6B6B;
   display: inline-block;
-  font-size: 120%;
+  font-size: 140%;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  padding: 25px 100px 0 85px;
+  padding: 25px 100px 0 54px;
   text-align: center;
 }
 
@@ -105,4 +132,12 @@ a:-webkit-any-link {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   color:  #6B6B6B;
+}
+
+p {
+  padding: 25px 0 25px 0;
+}
+
+ {
+  padding: 5px 0 25px 0;
 }

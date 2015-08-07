@@ -6,11 +6,8 @@ Bronze Level
 2. The user should be able to create a post.
 3. The user should be able to edit their posts.
 4. The user should be able to delete their posts.
-5. The user should be able to create a comment on a post.
-6. The user should be able to edit their comment.
-7. The user should be able to delete their comment.
-8. The user should be able to sign in.
-9. The user should be able to sign out.
+5. The user should be able to sign in.
+6. The user should be able to sign out.
 
 Silver Level
 
