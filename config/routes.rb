@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'categories#index'
 
   resources :users do
-    resources :posts, only: [:index]
+    resources :posts
   end
 
   resources :posts do

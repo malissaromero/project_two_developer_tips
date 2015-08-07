@@ -18,7 +18,7 @@
           <% if @user %>
             <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
           <% end %>
-      </li>
+        </li>
         <li>
           <% if session[:is_signed_in] %>
             <a href="/signout"><%= current_user.username %>: SIGNOUT</a>
@@ -27,7 +27,7 @@
             <a href="/signin"> SIGN IN</a>
           <% end %>
         </li>
-        <div class="flash_notice"> <%= flash[:notice] %> </div>
+        <div class="flash_notice"><%= flash[:notice] %></div>
       </ul>
     </nav>
     <%= yield %>

@@ -47,7 +47,7 @@ class UsersController < ApplicationController
       cookies[:username] = {
       value: @user.username,
       expires: 1.year.from_now
-    }
+      }
     end
     flash[:notice] = message
     redirect_to action: :signin
