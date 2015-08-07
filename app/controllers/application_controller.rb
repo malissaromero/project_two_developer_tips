@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate, only: [:index]
+  before_action :authenticate
+  #come back later
+  # before_action :authenticate, only: [:index]
 
   helper_method :current_user
 
