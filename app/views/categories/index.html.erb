@@ -1,12 +1,20 @@
 <p class="about">
-  DEVELOPER COMMAND HACKS ALLOWS YOU TO LEARN NEW SHORTCUTS EVERYDAY.</p>
-<p class="second">Click on a category and start learning.</p>
-<p class="third">They will definitely shave valuable seconds from your life.
+  DEVELOPER COMMAND HACKS ALLOWS YOU TO LEARN NEW SHORTCUTS EVERYDAY.
 </p>
-
+<p class="second">
+  Click on a category and start learning.
+</p>
+<p class="third">
+  They will definitely shave valuable seconds from your life.
+</p>
 
 <nav class="categories">
   <% @categories.each do |category| %>
-    <li><%= link_to category.name.upcase, category_posts_path(category) %><p>Click on this category<br>and learn cool new commands<br>for <%=category.name%>. </p></li>
+    <li>
+      <%= link_to category.name.upcase, category_posts_path(category) %>
+      <p>
+        Click on this category<br>and learn cool new commands<br>for <%=category.name%>.
+      </p>
+    </li>
   <% end %>
 </nav>

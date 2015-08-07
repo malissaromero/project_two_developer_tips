@@ -5,10 +5,8 @@
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-}
-
-html {
-  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  color:  #6B6B6B;
 }
 
 .site-container {
@@ -25,42 +23,33 @@ html, body {
 }
 
 html {
+  box-sizing: border-box;
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(
-    #E8E8E8 50%, #F8F8F8 50%
-  );
+  background-image: -webkit-linear-gradient(#E8E8E8 50%, #F8F8F8 50%);
 }
-
 
 h2 {
   color: #484647;
   font-size: 100%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
 }
 
 .about {
-  color:  #6B6B6B;
   font-size: 120%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   padding: 120px 100px 15px 85px;
   text-align: center;
 }
 
 .second {
-  color:  #6B6B6B;
   font-size: 120%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   padding: 15px 100px 15px 85px;
   text-align: center;
 }
 
 .third {
-  color:  #6B6B6B;
   font-size: 120%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   padding: 15px 100px 120px 85px;
   text-align: center;
@@ -79,10 +68,8 @@ ul {
 }
 
 .nav-header {
-  color: #6B6B6B;
   flex: 8 0 auto;
   font-size: 150%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
 }
 
@@ -91,17 +78,13 @@ ul {
   flex: 0 1 auto;
   padding-left: 10px;
   text-align: right;
-  color: #6B6B6B;
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 120%;
   font-weight: 600;
 }
 
 a.home, a.create, a.my_command {
-  color: #6B6B6B;
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 120%;
   font-weight: 600;
 }
@@ -117,10 +100,8 @@ a.home, a.create, a.my_command {
 }
 
 .categories li {
-  color:  #6B6B6B;
   display: inline-block;
   font-size: 140%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   padding: 25px 100px 0 54px;
   text-align: center;
@@ -129,9 +110,7 @@ a.home, a.create, a.my_command {
 a:-webkit-any-link {
   text-decoration: none;
   font-size: 120%;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  color:  #6B6B6B;
 }
 
 p {
