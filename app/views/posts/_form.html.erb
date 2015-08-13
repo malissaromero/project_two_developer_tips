@@ -2,7 +2,7 @@
 
   <%= f.label :title %>
   <%= f.text_field :title %>
-
+<!-- mms: this can be tough - in concept and practice -->
   <%= collection_check_boxes(:post, :category_ids, Category.all, :id, :name) %>
 
   <%= f.label :command %>
