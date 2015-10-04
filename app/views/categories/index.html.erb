@@ -1,15 +1,14 @@
-<div class="categoriesindex">
-  <p class="about">DEVELOPER COMMAND HACKS ALLOWS YOU TO LEARN NEW SHORTCUTS EVERYDAY.</p>
-  <p class="second">Click on a category and start learning.</p>
-  <p class="third">They will definitely shave valuable seconds from your life.</p>
+<div>
+  <h3 class="text-center">DEVELOPER COMMAND HACKS ALLOWS YOU TO LEARN NEW SHORTCUTS EVERYDAY</h3>
+  <h4 class="text-center">Click on a category and start learning.</h4>
+  <h4 class="text-center">These hacks will definitely shave valuable seconds from a developer's life.</h4>
 </div>
-
 
 <nav class="categories">
   <% @categories.each do |category| %>
-    <li>
+    <h4 class="text-center">
       <%= link_to category.name.upcase, category_posts_path(category) %>
       <p>Click on this category<br>and learn cool new commands<br>for <%=category.name%>.</p>
-    </li>
+    </h4>
   <% end %>
 </nav>

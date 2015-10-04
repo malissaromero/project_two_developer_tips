@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     end
     puts message
     flash[:notice] = message
-    redirect_to action: :signup
+    redirect_to action: :signin!
   end
 
   def signin
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     }
     end
     flash[:notice] = message
-    redirect_to action: :signin
+    redirect_to root_url
   end
 
   def signin_prompt

@@ -1,7 +1,26 @@
-<% @user.posts.each do |post| %>
-  <div>
-    <p><%= link_to "#{post.title}", post_path(post) %></p>
-    <p><%= post.command %></p>
-    <p><%= post.description %></p>
-  </div>
-<% end %>
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+    <% @user.posts.each do |post| %>
+    <tr>
+      <tc>
+        <td>
+          <%= link_to "#{post.title}", post_path(post) %>
+        </td>
+      </tc>
+      <tc>
+        <td>
+          <%= post.command %>
+        </td>
+      </tc>
+      <tc>
+        <td>
+          <%= post.description %>
+        </td>
+      </tc>
+    </tr>
+  <% end %>
+</table>

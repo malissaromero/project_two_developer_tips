@@ -1,5 +1,14 @@
+<table class="table table-striped">
+  <tr>
+    <th>Command Title</th>
+  </tr>
 <% @category.posts.each do |post| %>
-  <div>
-    <p><%= link_to "#{post.title}", post_path(post) %></p>
-  </div>
+  <tr>
+    <tc>
+      <td>
+        <%= link_to "#{post.title}", post_path(post) %>
+      </td>
+    </tc>
+  </tr>
 <% end %>
+</table>

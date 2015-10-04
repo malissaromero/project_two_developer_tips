@@ -1,16 +1,38 @@
 <%= form_for(@post) do |f| %>
+<form class="form-horizontal">
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-10">
+      <%= f.text_field :title, :class => "form-control"%>
+    </div>
+  </div>
 
-  <%= collection_check_boxes(:post, :category_ids, Category.all, :id, :name) %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <%= collection_check_boxes(:post, :category_ids, Category.all, :id, :name) %>
+    </div>
+  </div>
 
-  <%= f.label :command %>
-  <%= f.text_field :command %>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Command</label>
+    <div class="col-sm-10">
+      <%= f.text_field :command, :class => "form-control"%>
+    </div>
+  </div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+      <%= f.text_field :description, :class => "form-control" %>
+    </div>
+  </div>
 
-  <%= f.submit %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit %>
+    </div>
+  </div>
 
+</form>
 <% end %>

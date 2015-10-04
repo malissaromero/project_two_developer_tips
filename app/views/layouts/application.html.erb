@@ -3,42 +3,59 @@
 <head>
   <title>Developer Command Hacks</title>
   <link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,600,700italic' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="site-container">
-    <nav class="nav-list">
-      <h1 class="nav-header">DEVELOPMENT COMMAND HACKS</h1>
-      <ul>
-        <li><%= link_to "HOME", categories_path, class: "home"%>
-        </li>
-        <li><%= link_to "CREATE COMMAND", new_post_path, class: "create" %>
-        </li>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Developer Command Hacks</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", categories_path, class: "home" %></li>
+        <li><%= link_to "Create Command", new_post_path, class: "create" %></li>
         <li>
           <% if @user %>
-            <%= link_to "MY COMMANDS", user_path(@user), class: "my_command" %>
-          <% end %>
+          <%= link_to "My Commands", user_path(@user), class: "my_command" %>
+         <% end %>
+       </li>
+       <li>
+         <% if session[:is_signed_in] %>
+           <a href="/signout"><%= current_user.username %>: Sign Out</a>
         </li>
         <li>
-          <% if session[:is_signed_in] %>
-            <a href="/signout"><%= current_user.username %>: SIGNOUT</a>
-          <% else %>
-            <a href="/signup">SIGN UP |</a>
-            <a href="/signin"> SIGN IN</a>
-          <% end %>
+         <% else %>
+           <a href="/signup">Sign Up</a>
         </li>
-        <div class="flash_notice"><%= flash[:notice] %></div>
+        <li>
+           <a href="/signin"> Sign In</a>
+         <% end %>
+       </li>
       </ul>
-    </nav>
-    <%= yield %>
-  </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <%= yield %>
 </body>
 </html>

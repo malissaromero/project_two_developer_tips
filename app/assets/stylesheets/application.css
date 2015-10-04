@@ -1,4 +1,53 @@
-*, *::after, *::before {
+h3, h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  color:  #6B6B6B;
+}
+
+.categories {
+  display: flex;
+}
+
+h4.text-center {
+  padding: 25px 100px 0 130px;
+}
+
+p {
+  padding: 25px 0 25px 0;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color:  #6B6B6B;
+}
+
+a.navbar-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  color:  #6B6B6B;
+}
+
+.col-sm-10 {
+  padding: 0 0 20px 0;
+  width: 81.333333%;
+}
+
+input[type=checkbox], input[type=radio] {
+  margin: 4px 15px 0 15px;
+}
+
+h2 {
+  padding: 0 0 0 15px;
+}
+
+.delete {
+  margin: 0 0 0 240px;
+}
+
+.navbar-default {
+  
+}
+
+
+/**, *::after, *::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -116,4 +165,4 @@ a:-webkit-any-link {
 
 p {
   padding: 25px 0 25px 0;
-}
+}*/

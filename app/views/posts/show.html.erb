@@ -1,9 +1,27 @@
-<div>
-  <p><%= @post.title %>
-      <% if @post.user_id == current_user.id %>
-      <%= link_to "(Edit)", edit_post_path(@post) %>
-      <% end %>
-  </p>
-  <p><%= @post.command %></p>
-  <p><%= @post.description %></p>
-</div>
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <tc>
+      <td>
+        <%= @post.title %>
+        <% if @post.user_id == current_user.id %>
+        <%= link_to "(Edit)", edit_post_path(@post) %>
+        <% end %>
+      </td>
+    </tc>
+    <tc>
+      <td>
+        <%= @post.command %>
+      </td>
+    </tc>
+    <tc>
+      <td>
+        <%= @post.description %>
+      </td>
+    </tc>
+  </tr>
+</table>
