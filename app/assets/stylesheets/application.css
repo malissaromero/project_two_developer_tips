@@ -16,6 +16,10 @@ h3, h4 {
   color:  #6B6B6B;
 }
 
+.header {
+  padding: 140px 0 0 0;
+}
+
 .categories {
   display: flex;
 }
