@@ -11,11 +11,11 @@ Two = Post.create(title: "Copy Highlighted Text", category_ids: "2", command: "c
 
 Three = Post.create(title: "Copy Highlighted Text", category_ids: "3", command: "cmd-c", description: "Copy highlighted text with this command.")
 
-Four = Post.create(title: "Paste Highlighted Text", category_ids: "1", command: "cmd-v", description: "Copy highlighted text with this command.")
+Four = Post.create(title: "Paste Highlighted Text", category_ids: "1", command: "cmd-v", description: "Paste highlighted text with this command.")
 
-Five = Post.create(title: "Paste Highlighted Text", category_ids: "2", command: "cmd-v", description: "Copy highlighted text with this command.")
+Five = Post.create(title: "Paste Highlighted Text", category_ids: "2", command: "cmd-v", description: "Paste highlighted text with this command.")
 
-Six = Post.create(title: "Paste Highlighted Text", category_ids: "3", command: "cmd-v", description: "Copy highlighted text with this command.")
+Six = Post.create(title: "Paste Highlighted Text", category_ids: "3", command: "cmd-v", description: "Paste highlighted text with this command.")
 
 Seven = Post.create(title: "Close Tab Easily", category_ids: "2", command: "cmd-w", description: "Close a tab without trying to find the little X.")
 
